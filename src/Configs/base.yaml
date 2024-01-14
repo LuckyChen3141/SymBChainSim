@@ -5,7 +5,7 @@ simulation:
   interval_mean: 30
 
 application:
-  Nn: 4
+  Nn: 10
   TI_dur: 25
   Tn: 25
   Tsize: 0.01
@@ -22,9 +22,9 @@ data:
 
 network:
   base_msg_size: 0.2
-  gossip: False
-  num_neighbours: 2
-  use_latency: measured 
+  type: "smallworld"
+  num_neighbours: 3
+  use_latency: distance 
   same_city_latency_ms: 10
   same_city_dev_ms: 5
   queueing_delay: 0

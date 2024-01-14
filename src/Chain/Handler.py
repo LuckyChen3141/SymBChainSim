@@ -42,7 +42,7 @@ def handle_event(event, backlog=True):
 
     # if network mode is gossip - the node will mutlticast message to it's neighbours
     # backlog since we don't want want to multicast when cheking backlog
-    if Parameters.network["gossip"] and backlog and isinstance(event, MessageEvent):
+    if Parameters.network["type"]=="gossip" and backlog and isinstance(event, MessageEvent):
         Network.multicast(event.actor, event)
 
     # handlle event using it's respective handler

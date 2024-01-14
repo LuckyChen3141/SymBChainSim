@@ -36,10 +36,19 @@ class Network:
 
     @staticmethod
     def send_message(creator, event):
-        if Parameters.network["gossip"]:
-            Network.multicast(creator, event)
-        else:
-            Network.broadcast(creator, event)
+        with open("metrics.txt", "a") as file:
+            if Parameters.network["type"]=="gossip":
+                Network.multicast(creator, event)
+            elif Parameters.network["type"]=="broadcast":
+                Network.broadcast(creator, event)
+            elif Parameters.network["type"]=="smallworld":
+                Network.smallworld_message(creator, event)
+                 
+            elif Parameters.network["type"]=="lattice":
+                Network.lattice_message(creator, event)
+                 
+            else: 
+                print("wrong network type", file=file)
 
     @staticmethod
     def multicast(node, event):
@@ -54,7 +63,7 @@ class Network:
             return 0
 
         Network.message(sender, receiver, msg)
-
+        
     @staticmethod
     def broadcast(node, event):
         for n in Network.nodes:
@@ -70,7 +79,42 @@ class Network:
         msg.time += delay
         
         receiver.add_event(msg)
+    @staticmethod
+    def smallworld_message(node, event):
+        # Get the immediate neighbours
+        immediate_neighbours = node.neighbours
 
+        # Get a list of all nodes in the network
+        all_nodes = Network.nodes
+
+        # Remove the immediate neighbours and the current node from the list of all nodes
+        distant_nodes = [n for n in all_nodes if n not in immediate_neighbours and n != node]
+
+        # Choose a few distant nodes at random
+        # beta is the rewiring probability
+        beta1=0.5
+        approx_value = round(beta1 * len(all_nodes))
+        num_distant_nodes = min(approx_value, len(distant_nodes))  # Change this number as needed
+        chosen_distant_nodes = random.sample(distant_nodes, num_distant_nodes)
+
+        # Combine the immediate neighbours and chosen distant nodes
+        chosen_nodes = immediate_neighbours + chosen_distant_nodes
+
+        # Send the message to the chosen nodes
+        for n in chosen_nodes:
+            msg = MessageEvent.from_Event(event, n)
+            Network.message(node, n, msg)
+            
+    @staticmethod
+    def lattice_message(node, event):
+        # Get the immediate neighbours in the lattice
+        immediate_neighbours = node.neighbours
+
+        # Send the message to the immediate neighbours
+        for n in immediate_neighbours:
+            msg = MessageEvent.from_Event(event, n)
+            Network.message(node, n, msg)
+            
     @staticmethod
     def init_network(nodes, speeds=None):
         ''' 
@@ -102,8 +146,23 @@ class Network:
             else:
                 node.bandwidth = random.normalvariate(Parameters.network["bandwidth"]["mean"], Parameters.network["bandwidth"]["dev"])
                 print(node.bandwidth)
+    # @staticmethod
+    # def assign_neighbours(node=None):
+    #     '''
+    #         (default) node -> None
+    #         Randomly assing neibhours to all nodes (based on the config)
+    #         if node is provided assign to just that node
+    #     '''
+    #     if node is None:
+    #         for n in Network.nodes:
+    #             Network.assign_neighbours(n)
+    #     else:
+    #         node.neighbours = random.sample(
+    #             [x for x in Network.nodes if x != node],
+    #             Parameters.network["num_neighbours"])
     @staticmethod
-    def assign_neighbours(node=None):
+    def assign_neighbours(node=None, num_neighbours=2, beta1=0.5):
+        num_neighbours=Parameters.network["num_neighbours"]
         '''
             (default) node -> None
             Randomly assing neibhours to all nodes (based on the config)
@@ -111,11 +170,46 @@ class Network:
         '''
         if node is None:
             for n in Network.nodes:
-                Network.assign_neighbours(n)
-        else:
+                Network.assign_neighbours(n)       
+        elif Parameters.network["type"]=="gossip":
             node.neighbours = random.sample(
                 [x for x in Network.nodes if x != node],
-                Parameters.network["num_neighbours"])
+                num_neighbours)
+        elif Parameters.network["type"]=="broadcast":
+                node.neighbours = [x for x in Network.nodes if x != node]
+        elif Parameters.network["type"]=="smallworld":
+            # Check if there are enough nodes to sample from
+            if len(Network.nodes) > num_neighbours:
+                # Assign a small number of random neighbors
+                node.neighbours = random.sample(
+                    [x for x in Network.nodes if x != node],
+                    num_neighbours)
+            else:
+                raise ValueError("Not enough nodes to sample from")
+
+            # # Add a few long-range connections
+            # for _ in range(int(beta1 * num_neighbours)):
+            #     # Check if there are nodes to choose from
+            #     if Network.nodes:
+            #         while True:
+            #             potential_neighbour = random.choice(Network.nodes)
+            #             if potential_neighbour != node and potential_neighbour not in node.neighbours:
+            #                 node.neighbours.append(potential_neighbour)
+            #                 break
+            #     else:
+            #         raise IndexError("No nodes to choose from")
+
+        elif Parameters.network["type"]=="lattice":
+                print("------------------")
+                print("lattice")
+                # Assign neighbors based on communication speed
+                speeds = [(other, Network.calculate_message_propagation_delay(node, other, 1)) 
+                        for other in Network.nodes if other != node]
+                speeds.sort(key=lambda x: x[1], reverse=False)
+                node.neighbours = [other for other, speed in speeds[:num_neighbours]]
+        else:
+            print("parameter is ",Parameters.network["type"]) 
+            raise Exception("Wrong network type")
 
     @staticmethod
     def calculate_message_propagation_delay(sender, receiver, message_size):
@@ -191,7 +285,7 @@ class Network:
         Network.locations = []
         Network.distance_map = {}
     
-        with open("NetworkLatencies/distance_map.json","rb") as f:
+        with open("NetworkLatencies/point_distances_km.json","rb") as f:
             Network.distance_map = json.load(f)
         
         # overwritting the locations is fine to gurantee that they exists 

@@ -1,0 +1,76 @@
+Simulation Timestamp: 2024-01-14 23:51:44.220083
+Simulation Execution Time: 0:00:07.057788
+
+Node: Node: 0
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 0 is at location point20 and has 3 neighbours at locations 
+ ['point21', 'point9', 'point27']
+Node: Node: 1
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 1 is at location point9 and has 3 neighbours at locations 
+ ['point24', 'point26', 'point31']
+Node: Node: 2
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 2 is at location point24 and has 3 neighbours at locations 
+ ['point20', 'point12', 'point21']
+Node: Node: 3
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 3 is at location point12 and has 3 neighbours at locations 
+ ['point31', 'point24', 'point27']
+Node: Node: 4
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 4 is at location point26 and has 3 neighbours at locations 
+ ['point12', 'point27', 'point23']
+Node: Node: 5
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 5 is at location point23 and has 3 neighbours at locations 
+ ['point9', 'point12', 'point20']
+Node: Node: 6
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 6 is at location point31 and has 3 neighbours at locations 
+ ['point12', 'point27', 'point24']
+Node: Node: 7
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 7 is at location point27 and has 3 neighbours at locations 
+ ['point24', 'point31', 'point9']
+Node: Node: 8
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 8 is at location point24 and has 3 neighbours at locations 
+ ['point9', 'point24', 'point26']
+Node: Node: 9
+Total Blocks: 113
+PBFT Blocks: 113
+BigFoot Blocks: 0
+Node Node: 9 is at location point21 and has 3 neighbours at locations 
+ ['point27', 'point24', 'point9']
+
+Metrics:
+------------------------------ METRICS ------------------------------
+Node: 0 -> {'Latency': '78.788', 'Throughput': '18.482', 'Blocktime': '5.318', 'Decentralisation': '0.018504'}
+Node: 1 -> {'Latency': '78.522', 'Throughput': '18.482', 'Blocktime': '5.318', 'Decentralisation': '0.018504'}
+Node: 2 -> {'Latency': '78.633', 'Throughput': '18.482', 'Blocktime': '5.308', 'Decentralisation': '0.018504'}
+Node: 3 -> {'Latency': '78.617', 'Throughput': '18.482', 'Blocktime': '5.318', 'Decentralisation': '0.018504'}
+Node: 4 -> {'Latency': '78.762', 'Throughput': '18.482', 'Blocktime': '5.318', 'Decentralisation': '0.018504'}
+Node: 5 -> {'Latency': '78.896', 'Throughput': '18.482', 'Blocktime': '5.318', 'Decentralisation': '0.018504'}
+Node: 6 -> {'Latency': '78.672', 'Throughput': '18.482', 'Blocktime': '5.318', 'Decentralisation': '0.018504'}
+Node: 7 -> {'Latency': '78.519', 'Throughput': '18.482', 'Blocktime': '5.318', 'Decentralisation': '0.018504'}
+Node: 8 -> {'Latency': '78.769', 'Throughput': '18.482', 'Blocktime': '5.334', 'Decentralisation': '0.018504'}
+Node: 9 -> {'Latency': '78.756', 'Throughput': '18.482', 'Blocktime': '5.313', 'Decentralisation': '0.018504'}
