@@ -72,4 +72,4 @@ class Parameters:
     def calculate_fault_tolerance():
         Parameters.application["f"] = int((Parameters.application["Nn"] - 1) / 3)
         Parameters.application["required_messages"] = (2 * Parameters.application["f"]) + 1
-    
+    # this is the number of messages required to reach consensus

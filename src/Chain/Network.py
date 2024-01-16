@@ -79,32 +79,40 @@ class Network:
         msg.time += delay
         
         receiver.add_event(msg)
+    # @staticmethod
+    # def smallworld_message(node, event):
+    #     # Get the immediate neighbours
+    #     immediate_neighbours = node.neighbours
+
+    #     # Get a list of all nodes in the network
+    #     all_nodes = Network.nodes
+
+    #     # Remove the immediate neighbours and the current node from the list of all nodes
+    #     distant_nodes = [n for n in all_nodes if n not in immediate_neighbours and n != node]
+
+    #     # Choose a few distant nodes at random
+    #     # beta is the rewiring probability
+    #     beta1=0.5
+    #     approx_value = round(beta1 * len(all_nodes))
+    #     num_distant_nodes = min(approx_value, len(distant_nodes))  # Change this number as needed
+    #     chosen_distant_nodes = random.sample(distant_nodes, num_distant_nodes)
+
+    #     # Combine the immediate neighbours and chosen distant nodes
+    #     chosen_nodes = immediate_neighbours + chosen_distant_nodes
+
+    #     # Send the message to the chosen nodes
+    #     for n in chosen_nodes:
+    #         msg = MessageEvent.from_Event(event, n)
+    #         Network.message(node, n, msg)
     @staticmethod
     def smallworld_message(node, event):
-        # Get the immediate neighbours
-        immediate_neighbours = node.neighbours
+        # Get the neighbours (both immediate and long-range)
+        neighbours = node.neighbours
 
-        # Get a list of all nodes in the network
-        all_nodes = Network.nodes
-
-        # Remove the immediate neighbours and the current node from the list of all nodes
-        distant_nodes = [n for n in all_nodes if n not in immediate_neighbours and n != node]
-
-        # Choose a few distant nodes at random
-        # beta is the rewiring probability
-        beta1=0.5
-        approx_value = round(beta1 * len(all_nodes))
-        num_distant_nodes = min(approx_value, len(distant_nodes))  # Change this number as needed
-        chosen_distant_nodes = random.sample(distant_nodes, num_distant_nodes)
-
-        # Combine the immediate neighbours and chosen distant nodes
-        chosen_nodes = immediate_neighbours + chosen_distant_nodes
-
-        # Send the message to the chosen nodes
-        for n in chosen_nodes:
+        # Send the message to the neighbours
+        for n in neighbours:
             msg = MessageEvent.from_Event(event, n)
             Network.message(node, n, msg)
-            
     @staticmethod
     def lattice_message(node, event):
         # Get the immediate neighbours in the lattice
@@ -185,6 +193,21 @@ class Network:
                     [x for x in Network.nodes if x != node],
                     num_neighbours)
             else:
+                raise ValueError("Not enough nodes to sample from")
+
+            beta1=Parameters.network["beta"]
+            # Add a few long-range connections
+            for _ in range(int(beta1 * len(Network.nodes))):
+                # Check if there are nodes to choose from
+                if Network.nodes:
+                    while True:
+                        potential_neighbour = random.choice(Network.nodes)
+                        if potential_neighbour != node and potential_neighbour not in node.neighbours:
+                            node.neighbours.append(potential_neighbour)
+                            break
+                else:
+                    raise IndexError("No nodes to choose from")
+            if len(node.neighbours) < num_neighbours:
                 raise ValueError("Not enough nodes to sample from")
 
             # # Add a few long-range connections

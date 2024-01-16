@@ -1,11 +1,11 @@
 simulation:
   init_CP: "PBFT"
-  simTime: 600
+  simTime: 100
   interval_switch: False
   interval_mean: 30
 
 application:
-  Nn: 10
+  Nn: 50
   TI_dur: 25
   Tn: 25
   Tsize: 0.01
@@ -23,12 +23,13 @@ data:
 network:
   base_msg_size: 0.2
   type: "smallworld"
-  num_neighbours: 3
+  num_neighbours: 20
   use_latency: distance 
   same_city_latency_ms: 10
   same_city_dev_ms: 5
   queueing_delay: 0
   processing_delay: 0
+  beta: 0.4 # small world rewiring probability
 
   bandwidth:
     mean: 2
