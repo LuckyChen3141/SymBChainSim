@@ -5,7 +5,7 @@ simulation:
   interval_mean: 30
 
 application:
-  Nn: 50
+  Nn: 10
   TI_dur: 25
   Tn: 25
   Tsize: 0.01
@@ -15,6 +15,7 @@ execution:
   block_val_delay: 0.5
   msg_val_delay: 0.1
   sync_message_request_delay: 1
+  alpha: 0.8 # probability of a node to be a 
 
 data:
   Bsize: 1
@@ -22,8 +23,8 @@ data:
 
 network:
   base_msg_size: 0.2
-  type: "smallworld"
-  num_neighbours: 20
+  type: "broadcast"
+  num_neighbours: 7
   use_latency: distance 
   same_city_latency_ms: 10
   same_city_dev_ms: 5

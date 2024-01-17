@@ -15,7 +15,7 @@
 
 from Chain.Block import Block
 from Chain.Parameters import Parameters
-
+import random
 import Chain.Consensus.Rounds as Rounds
 import Chain.Consensus.HighLevelSync as Sync
 
@@ -31,6 +31,9 @@ NAME = "BigFoot"
 def set_state(node):
     # add a reference to the CP module to to allow for CP method calls
     node.state.cp = modules[__name__]
+    # Set the node as a validator with probability alpha
+    alpha =Parameters.execution["alpha"]  # Set this to your desired probability
+    node.validator = random.random() <= alpha
 
     node.state.cp_state = SimpleNamespace(
         round=Rounds.round_change_state(),
@@ -41,6 +44,7 @@ def set_state(node):
         timeout=None,
         fast_path_timeout=None,
         block=None,
+        validator=node.validator,
     )
 
 def state_to_string(node):
@@ -122,8 +126,11 @@ def handle_event(event):  # specific to BigFoot - called by events in Handler.ha
 ########################## PROTOCOL COMMUNICATION ###########################
 
 def process_vote(node, type, sender):
+    if node.validator or sender.id==node.id:
+        # if node is a validator count vote
+        node.state.cp_state.msgs[type] += [sender.id]
     # BigFoot does not allow for mutliple blocks to be submitted in 1 round
-    node.state.cp_state.msgs[type] += [sender.id]
+    #node.state.cp_state.msgs[type] += [sender.id]
 
 def pre_prepare(event):
     node = event.receiver

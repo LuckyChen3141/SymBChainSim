@@ -35,6 +35,7 @@ def run():
         # Write information about each node to the report
         for n in manager.sim.nodes:
             report_file.write(f"Node: {n}\n")
+            report_file.write(f"Validator: {n.validator}\n")
             report_file.write(f"Total Blocks: {n.blockchain_length()}\n")
             report_file.write(f"PBFT Blocks: {len([x for x in n.blockchain if x.consensus == PBFT])}\n")
             report_file.write(f"BigFoot Blocks: {len([x for x in n.blockchain if x.consensus == BigFoot])}\n")

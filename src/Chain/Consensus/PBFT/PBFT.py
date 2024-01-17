@@ -20,7 +20,7 @@ from types import SimpleNamespace
 
 from random import randint
 from sys import modules
-
+import random
 from copy import copy
 
 ########################## PROTOCOL CHARACTERISTICS ###########################
@@ -30,6 +30,8 @@ NAME = "PBFT"
 def set_state(node):
     # add a reference to the CP module to to allow for CP method calls
     node.state.cp = modules[__name__]
+    alpha =Parameters.execution["alpha"]  # Set this to your desired probability
+    node.validator = random.random() <= alpha
 
     node.state.cp_state = SimpleNamespace(
         round=Rounds.round_change_state(),
@@ -38,6 +40,8 @@ def set_state(node):
         msgs={'prepare': [], 'commit': []},
         timeout=None,
         block=None,
+        validator=node.validator,
+        
     )
 
 
@@ -133,10 +137,17 @@ def validate_message(event, node):
     return True
 
 
+# def process_vote(node, type, sender):
+
+#     # if node in self.validators:
+#         # This node is a validator, so its vote is counted
+#         # Process the vote as usual...
+#         node.state.cp_state.msgs[type] += [sender.id]
 def process_vote(node, type, sender):
     # PBFT does not allow for mutliple blocks to be submitted in 1 round
-    node.state.cp_state.msgs[type] += [sender.id]
-
+    if node.validator or sender.id==node.id:
+        # if node is a validator count vote
+        node.state.cp_state.msgs[type] += [sender.id]
 
 def pre_prepare(event):
     node = event.receiver

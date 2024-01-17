@@ -1,6 +1,6 @@
 # SymBChainSim-Modified
 
-This project is a modification of GiorgDiama's SymBChainSim, which can be found [here](https://github.com/GiorgDiama/SymBChainSim). The main structure of SymBChainSim has been utilized and numerous modifications have been made to suit the requirements of my simulation.
+This project is a modification of GiorgDiama's SymBChainSim, which can be found [here](https://github.com/GiorgDiama/SymBChainSim). The main structure of SymBChainSim has been utilized and some modifications have been made to suit the requirements of my simulation.
 
 The simulation code is part of my academic research, where I aim to investigate the Proof of Authority (PoA) blockchain and small-world network structures.
 

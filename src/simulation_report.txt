@@ -1,303 +1,86 @@
-Simulation Timestamp: 2024-01-15 21:57:57.703618
-Simulation Execution Time: 0:02:20.323611
+Simulation Timestamp: 2024-01-17 11:00:54.207083
+Simulation Execution Time: 0:00:01.541208
 
 Node: Node: 0
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: True
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 0 is at location point20 and has 40 neighbours at locations 
- ['point21', 'point15', 'point9', 'point20', 'point15', 'point3', 'point17', 'point25', 'point2', 'point6', 'point27', 'point14', 'point26', 'point1', 'point28', 'point28', 'point29', 'point24', 'point9', 'point6', 'point30', 'point31', 'point26', 'point30', 'point4', 'point19', 'point12', 'point8', 'point12', 'point16', 'point18', 'point27', 'point20', 'point25', 'point4', 'point1', 'point24', 'point31', 'point21', 'point13']
+Node Node: 0 is at location point20 and has 9 neighbours at locations 
+ ['point9', 'point24', 'point12', 'point26', 'point23', 'point31', 'point27', 'point24', 'point21']
 Node: Node: 1
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: True
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 1 is at location point9 and has 40 neighbours at locations 
- ['point31', 'point15', 'point4', 'point24', 'point25', 'point16', 'point30', 'point20', 'point21', 'point14', 'point15', 'point29', 'point6', 'point30', 'point1', 'point28', 'point25', 'point9', 'point31', 'point7', 'point5', 'point12', 'point23', 'point28', 'point24', 'point25', 'point4', 'point13', 'point8', 'point21', 'point8', 'point27', 'point24', 'point13', 'point12', 'point26', 'point19', 'point8', 'point27', 'point17']
+Node Node: 1 is at location point9 and has 9 neighbours at locations 
+ ['point20', 'point24', 'point12', 'point26', 'point23', 'point31', 'point27', 'point24', 'point21']
 Node: Node: 2
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: True
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 2 is at location point24 and has 40 neighbours at locations 
- ['point13', 'point1', 'point4', 'point1', 'point31', 'point20', 'point21', 'point24', 'point9', 'point6', 'point16', 'point23', 'point12', 'point12', 'point29', 'point28', 'point25', 'point26', 'point21', 'point28', 'point3', 'point6', 'point17', 'point6', 'point20', 'point19', 'point14', 'point15', 'point31', 'point8', 'point4', 'point20', 'point8', 'point18', 'point30', 'point5', 'point2', 'point25', 'point9', 'point15']
+Node Node: 2 is at location point24 and has 9 neighbours at locations 
+ ['point20', 'point9', 'point12', 'point26', 'point23', 'point31', 'point27', 'point24', 'point21']
 Node: Node: 3
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: False
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 3 is at location point12 and has 40 neighbours at locations 
- ['point15', 'point26', 'point1', 'point13', 'point24', 'point8', 'point25', 'point17', 'point26', 'point21', 'point24', 'point6', 'point20', 'point20', 'point27', 'point3', 'point13', 'point19', 'point6', 'point14', 'point6', 'point28', 'point12', 'point20', 'point4', 'point28', 'point8', 'point8', 'point27', 'point2', 'point31', 'point21', 'point7', 'point1', 'point9', 'point4', 'point30', 'point30', 'point16', 'point23']
+Node Node: 3 is at location point12 and has 9 neighbours at locations 
+ ['point20', 'point9', 'point24', 'point26', 'point23', 'point31', 'point27', 'point24', 'point21']
 Node: Node: 4
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: True
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 4 is at location point26 and has 40 neighbours at locations 
- ['point12', 'point25', 'point20', 'point28', 'point27', 'point6', 'point6', 'point25', 'point14', 'point30', 'point26', 'point20', 'point5', 'point18', 'point9', 'point25', 'point1', 'point2', 'point31', 'point15', 'point16', 'point30', 'point20', 'point8', 'point8', 'point9', 'point29', 'point21', 'point21', 'point19', 'point6', 'point28', 'point24', 'point24', 'point7', 'point8', 'point24', 'point13', 'point3', 'point4']
+Node Node: 4 is at location point26 and has 9 neighbours at locations 
+ ['point20', 'point9', 'point24', 'point12', 'point23', 'point31', 'point27', 'point24', 'point21']
 Node: Node: 5
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: True
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 5 is at location point23 and has 40 neighbours at locations 
- ['point12', 'point16', 'point26', 'point30', 'point21', 'point24', 'point20', 'point8', 'point9', 'point19', 'point27', 'point14', 'point27', 'point25', 'point18', 'point5', 'point8', 'point28', 'point31', 'point6', 'point1', 'point21', 'point4', 'point20', 'point26', 'point2', 'point15', 'point13', 'point13', 'point30', 'point6', 'point7', 'point12', 'point15', 'point6', 'point9', 'point28', 'point3', 'point24', 'point17']
+Node Node: 5 is at location point23 and has 9 neighbours at locations 
+ ['point20', 'point9', 'point24', 'point12', 'point26', 'point31', 'point27', 'point24', 'point21']
 Node: Node: 6
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: True
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 6 is at location point31 and has 40 neighbours at locations 
- ['point25', 'point1', 'point13', 'point17', 'point26', 'point15', 'point15', 'point24', 'point9', 'point27', 'point28', 'point3', 'point21', 'point12', 'point24', 'point8', 'point21', 'point20', 'point25', 'point6', 'point29', 'point30', 'point8', 'point4', 'point13', 'point12', 'point26', 'point1', 'point14', 'point28', 'point31', 'point25', 'point20', 'point24', 'point4', 'point20', 'point16', 'point9', 'point6', 'point23']
+Node Node: 6 is at location point31 and has 9 neighbours at locations 
+ ['point20', 'point9', 'point24', 'point12', 'point26', 'point23', 'point27', 'point24', 'point21']
 Node: Node: 7
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: True
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 7 is at location point27 and has 40 neighbours at locations 
- ['point6', 'point25', 'point24', 'point23', 'point24', 'point24', 'point28', 'point19', 'point31', 'point28', 'point6', 'point8', 'point6', 'point31', 'point7', 'point9', 'point25', 'point12', 'point18', 'point26', 'point13', 'point15', 'point20', 'point27', 'point26', 'point16', 'point4', 'point25', 'point21', 'point3', 'point5', 'point13', 'point12', 'point9', 'point17', 'point1', 'point20', 'point20', 'point2', 'point29']
+Node Node: 7 is at location point27 and has 9 neighbours at locations 
+ ['point20', 'point9', 'point24', 'point12', 'point26', 'point23', 'point31', 'point24', 'point21']
 Node: Node: 8
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: True
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 8 is at location point24 and has 40 neighbours at locations 
- ['point19', 'point15', 'point31', 'point27', 'point30', 'point6', 'point17', 'point26', 'point16', 'point28', 'point8', 'point3', 'point9', 'point8', 'point27', 'point21', 'point25', 'point2', 'point4', 'point14', 'point24', 'point20', 'point12', 'point29', 'point12', 'point26', 'point9', 'point4', 'point21', 'point25', 'point5', 'point1', 'point15', 'point23', 'point28', 'point13', 'point30', 'point13', 'point20', 'point18']
+Node Node: 8 is at location point24 and has 9 neighbours at locations 
+ ['point20', 'point9', 'point24', 'point12', 'point26', 'point23', 'point31', 'point27', 'point21']
 Node: Node: 9
-Total Blocks: 0
-PBFT Blocks: 0
+Validator: True
+Total Blocks: 19
+PBFT Blocks: 19
 BigFoot Blocks: 0
-Node Node: 9 is at location point21 and has 40 neighbours at locations 
- ['point26', 'point13', 'point17', 'point24', 'point5', 'point9', 'point7', 'point6', 'point12', 'point31', 'point26', 'point31', 'point1', 'point23', 'point8', 'point12', 'point30', 'point25', 'point24', 'point27', 'point8', 'point18', 'point2', 'point25', 'point1', 'point28', 'point15', 'point29', 'point30', 'point28', 'point9', 'point4', 'point15', 'point16', 'point24', 'point20', 'point20', 'point14', 'point27', 'point19']
-Node: Node: 10
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 10 is at location point30 and has 40 neighbours at locations 
- ['point23', 'point8', 'point8', 'point6', 'point24', 'point3', 'point14', 'point15', 'point8', 'point31', 'point6', 'point18', 'point6', 'point25', 'point21', 'point12', 'point1', 'point9', 'point9', 'point12', 'point1', 'point31', 'point26', 'point29', 'point16', 'point20', 'point20', 'point13', 'point21', 'point26', 'point5', 'point13', 'point2', 'point25', 'point24', 'point7', 'point20', 'point27', 'point4', 'point28']
-Node: Node: 11
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 11 is at location point17 and has 40 neighbours at locations 
- ['point9', 'point25', 'point7', 'point18', 'point24', 'point16', 'point27', 'point4', 'point12', 'point20', 'point30', 'point30', 'point28', 'point31', 'point21', 'point20', 'point6', 'point21', 'point20', 'point28', 'point13', 'point27', 'point6', 'point29', 'point15', 'point4', 'point12', 'point15', 'point6', 'point19', 'point8', 'point8', 'point25', 'point24', 'point9', 'point3', 'point1', 'point8', 'point2', 'point14']
-Node: Node: 12
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 12 is at location point1 and has 40 neighbours at locations 
- ['point7', 'point12', 'point31', 'point16', 'point20', 'point20', 'point25', 'point12', 'point25', 'point1', 'point8', 'point3', 'point21', 'point6', 'point26', 'point13', 'point28', 'point24', 'point6', 'point23', 'point31', 'point21', 'point29', 'point19', 'point28', 'point20', 'point30', 'point17', 'point9', 'point2', 'point18', 'point14', 'point15', 'point24', 'point27', 'point26', 'point4', 'point8', 'point25', 'point27']
-Node: Node: 13
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 13 is at location point27 and has 40 neighbours at locations 
- ['point31', 'point4', 'point14', 'point18', 'point8', 'point20', 'point25', 'point28', 'point6', 'point17', 'point7', 'point15', 'point6', 'point13', 'point6', 'point31', 'point16', 'point15', 'point4', 'point12', 'point21', 'point2', 'point8', 'point28', 'point26', 'point30', 'point25', 'point9', 'point5', 'point13', 'point19', 'point24', 'point30', 'point25', 'point23', 'point9', 'point21', 'point27', 'point1', 'point29']
-Node: Node: 14
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 14 is at location point15 and has 40 neighbours at locations 
- ['point28', 'point31', 'point6', 'point3', 'point4', 'point26', 'point12', 'point1', 'point24', 'point7', 'point26', 'point6', 'point1', 'point19', 'point28', 'point25', 'point8', 'point20', 'point20', 'point20', 'point25', 'point30', 'point27', 'point23', 'point21', 'point12', 'point9', 'point18', 'point29', 'point15', 'point17', 'point14', 'point6', 'point25', 'point27', 'point4', 'point16', 'point30', 'point5', 'point21']
-Node: Node: 15
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 15 is at location point25 and has 40 neighbours at locations 
- ['point9', 'point27', 'point8', 'point12', 'point1', 'point4', 'point28', 'point21', 'point2', 'point1', 'point23', 'point6', 'point20', 'point13', 'point13', 'point26', 'point26', 'point18', 'point15', 'point30', 'point8', 'point8', 'point6', 'point5', 'point31', 'point14', 'point19', 'point17', 'point7', 'point16', 'point24', 'point20', 'point31', 'point4', 'point24', 'point12', 'point27', 'point25', 'point30', 'point28']
-Node: Node: 16
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 16 is at location point31 and has 40 neighbours at locations 
- ['point13', 'point30', 'point24', 'point27', 'point9', 'point13', 'point26', 'point18', 'point28', 'point20', 'point30', 'point4', 'point21', 'point29', 'point1', 'point6', 'point26', 'point16', 'point31', 'point14', 'point8', 'point8', 'point24', 'point19', 'point12', 'point21', 'point25', 'point27', 'point15', 'point20', 'point4', 'point25', 'point20', 'point8', 'point25', 'point28', 'point17', 'point23', 'point6', 'point24']
-Node: Node: 17
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 17 is at location point8 and has 40 neighbours at locations 
- ['point3', 'point9', 'point23', 'point2', 'point27', 'point31', 'point6', 'point8', 'point16', 'point29', 'point13', 'point8', 'point20', 'point4', 'point25', 'point24', 'point31', 'point9', 'point21', 'point20', 'point5', 'point19', 'point12', 'point15', 'point27', 'point15', 'point1', 'point28', 'point24', 'point26', 'point4', 'point14', 'point18', 'point12', 'point24', 'point6', 'point30', 'point30', 'point25', 'point26']
-Node: Node: 18
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 18 is at location point21 and has 40 neighbours at locations 
- ['point6', 'point4', 'point12', 'point27', 'point7', 'point25', 'point28', 'point31', 'point24', 'point29', 'point9', 'point16', 'point13', 'point24', 'point19', 'point12', 'point26', 'point1', 'point20', 'point2', 'point24', 'point20', 'point23', 'point27', 'point6', 'point21', 'point31', 'point8', 'point9', 'point30', 'point25', 'point26', 'point6', 'point18', 'point17', 'point30', 'point4', 'point14', 'point28', 'point8']
-Node: Node: 19
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 19 is at location point2 and has 40 neighbours at locations 
- ['point26', 'point6', 'point24', 'point9', 'point30', 'point13', 'point27', 'point15', 'point7', 'point25', 'point4', 'point6', 'point15', 'point14', 'point25', 'point26', 'point23', 'point20', 'point1', 'point12', 'point13', 'point24', 'point5', 'point8', 'point28', 'point20', 'point31', 'point20', 'point29', 'point8', 'point16', 'point21', 'point27', 'point28', 'point4', 'point18', 'point17', 'point1', 'point24', 'point30']
-Node: Node: 20
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 20 is at location point29 and has 40 neighbours at locations 
- ['point26', 'point24', 'point4', 'point6', 'point12', 'point9', 'point21', 'point18', 'point8', 'point5', 'point1', 'point20', 'point14', 'point27', 'point25', 'point30', 'point13', 'point31', 'point30', 'point7', 'point21', 'point28', 'point31', 'point1', 'point4', 'point8', 'point25', 'point3', 'point13', 'point23', 'point27', 'point15', 'point6', 'point17', 'point12', 'point16', 'point8', 'point2', 'point26', 'point24']
-Node: Node: 21
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 21 is at location point6 and has 40 neighbours at locations 
- ['point31', 'point20', 'point24', 'point13', 'point15', 'point19', 'point5', 'point26', 'point15', 'point25', 'point9', 'point6', 'point14', 'point21', 'point3', 'point20', 'point29', 'point16', 'point8', 'point24', 'point4', 'point30', 'point25', 'point27', 'point28', 'point7', 'point23', 'point13', 'point6', 'point8', 'point2', 'point27', 'point1', 'point24', 'point25', 'point17', 'point1', 'point12', 'point18', 'point9']
-Node: Node: 22
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 22 is at location point4 and has 40 neighbours at locations 
- ['point13', 'point24', 'point31', 'point21', 'point30', 'point15', 'point20', 'point19', 'point8', 'point8', 'point28', 'point31', 'point24', 'point1', 'point6', 'point30', 'point4', 'point15', 'point26', 'point27', 'point23', 'point5', 'point18', 'point25', 'point26', 'point2', 'point6', 'point25', 'point12', 'point7', 'point14', 'point27', 'point20', 'point9', 'point6', 'point9', 'point12', 'point24', 'point20', 'point1']
-Node: Node: 23
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 23 is at location point12 and has 40 neighbours at locations 
- ['point29', 'point5', 'point3', 'point25', 'point20', 'point30', 'point6', 'point1', 'point20', 'point14', 'point8', 'point19', 'point16', 'point24', 'point15', 'point13', 'point28', 'point27', 'point25', 'point31', 'point25', 'point6', 'point28', 'point8', 'point8', 'point27', 'point26', 'point13', 'point2', 'point30', 'point20', 'point18', 'point12', 'point31', 'point24', 'point21', 'point4', 'point1', 'point15', 'point17']
-Node: Node: 24
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 24 is at location point16 and has 40 neighbours at locations 
- ['point19', 'point4', 'point8', 'point20', 'point21', 'point7', 'point26', 'point9', 'point25', 'point13', 'point15', 'point27', 'point6', 'point20', 'point24', 'point1', 'point25', 'point6', 'point31', 'point12', 'point12', 'point23', 'point17', 'point15', 'point28', 'point20', 'point24', 'point13', 'point2', 'point5', 'point30', 'point27', 'point26', 'point24', 'point18', 'point21', 'point8', 'point8', 'point14', 'point3']
-Node: Node: 25
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 25 is at location point28 and has 40 neighbours at locations 
- ['point20', 'point4', 'point20', 'point1', 'point5', 'point29', 'point30', 'point31', 'point24', 'point3', 'point14', 'point30', 'point12', 'point31', 'point18', 'point6', 'point21', 'point21', 'point23', 'point20', 'point7', 'point13', 'point26', 'point8', 'point12', 'point19', 'point9', 'point6', 'point8', 'point9', 'point15', 'point1', 'point26', 'point15', 'point6', 'point13', 'point17', 'point4', 'point2', 'point25']
-Node: Node: 26
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 26 is at location point8 and has 40 neighbours at locations 
- ['point26', 'point27', 'point7', 'point23', 'point6', 'point15', 'point13', 'point5', 'point24', 'point1', 'point24', 'point8', 'point27', 'point4', 'point2', 'point21', 'point18', 'point8', 'point14', 'point15', 'point9', 'point26', 'point25', 'point25', 'point21', 'point6', 'point16', 'point31', 'point30', 'point4', 'point25', 'point13', 'point6', 'point29', 'point12', 'point30', 'point31', 'point1', 'point28', 'point28']
-Node: Node: 27
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 27 is at location point13 and has 40 neighbours at locations 
- ['point18', 'point27', 'point24', 'point26', 'point4', 'point29', 'point24', 'point2', 'point12', 'point8', 'point28', 'point30', 'point31', 'point17', 'point20', 'point3', 'point21', 'point6', 'point9', 'point21', 'point6', 'point20', 'point26', 'point12', 'point23', 'point25', 'point15', 'point30', 'point6', 'point24', 'point1', 'point9', 'point28', 'point19', 'point8', 'point16', 'point31', 'point20', 'point5', 'point7']
-Node: Node: 28
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 28 is at location point18 and has 40 neighbours at locations 
- ['point19', 'point4', 'point8', 'point17', 'point5', 'point8', 'point20', 'point28', 'point29', 'point31', 'point1', 'point21', 'point13', 'point7', 'point15', 'point27', 'point21', 'point16', 'point9', 'point31', 'point6', 'point25', 'point26', 'point8', 'point6', 'point1', 'point14', 'point2', 'point6', 'point28', 'point30', 'point24', 'point24', 'point27', 'point15', 'point12', 'point4', 'point20', 'point26', 'point25']
-Node: Node: 29
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 29 is at location point4 and has 40 neighbours at locations 
- ['point27', 'point20', 'point30', 'point4', 'point6', 'point31', 'point8', 'point30', 'point8', 'point2', 'point26', 'point28', 'point17', 'point25', 'point1', 'point20', 'point25', 'point8', 'point13', 'point15', 'point12', 'point5', 'point20', 'point14', 'point27', 'point16', 'point6', 'point9', 'point31', 'point21', 'point24', 'point26', 'point21', 'point23', 'point29', 'point12', 'point28', 'point6', 'point24', 'point18']
-Node: Node: 30
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 30 is at location point19 and has 40 neighbours at locations 
- ['point21', 'point26', 'point20', 'point30', 'point5', 'point1', 'point15', 'point20', 'point6', 'point2', 'point23', 'point25', 'point25', 'point27', 'point16', 'point9', 'point21', 'point24', 'point31', 'point14', 'point30', 'point27', 'point28', 'point3', 'point8', 'point18', 'point25', 'point31', 'point17', 'point4', 'point7', 'point13', 'point4', 'point24', 'point8', 'point6', 'point9', 'point28', 'point26', 'point6']
-Node: Node: 31
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 31 is at location point8 and has 40 neighbours at locations 
- ['point20', 'point19', 'point14', 'point12', 'point28', 'point25', 'point28', 'point24', 'point1', 'point24', 'point31', 'point6', 'point26', 'point17', 'point12', 'point13', 'point30', 'point16', 'point4', 'point8', 'point3', 'point15', 'point9', 'point6', 'point21', 'point20', 'point5', 'point4', 'point18', 'point25', 'point29', 'point21', 'point23', 'point27', 'point15', 'point13', 'point7', 'point20', 'point25', 'point24']
-Node: Node: 32
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 32 is at location point1 and has 40 neighbours at locations 
- ['point27', 'point24', 'point26', 'point13', 'point18', 'point17', 'point15', 'point9', 'point6', 'point5', 'point14', 'point7', 'point13', 'point15', 'point30', 'point8', 'point24', 'point30', 'point25', 'point6', 'point29', 'point12', 'point20', 'point27', 'point1', 'point31', 'point8', 'point2', 'point6', 'point25', 'point9', 'point19', 'point8', 'point12', 'point21', 'point21', 'point4', 'point20', 'point31', 'point16']
-Node: Node: 33
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 33 is at location point24 and has 40 neighbours at locations 
- ['point20', 'point27', 'point31', 'point7', 'point28', 'point23', 'point31', 'point15', 'point29', 'point2', 'point9', 'point4', 'point24', 'point21', 'point12', 'point25', 'point8', 'point26', 'point27', 'point19', 'point20', 'point26', 'point25', 'point13', 'point6', 'point13', 'point1', 'point28', 'point16', 'point1', 'point25', 'point3', 'point9', 'point8', 'point6', 'point14', 'point15', 'point8', 'point21', 'point24']
-Node: Node: 34
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 34 is at location point7 and has 40 neighbours at locations 
- ['point25', 'point4', 'point12', 'point15', 'point17', 'point20', 'point15', 'point13', 'point24', 'point30', 'point21', 'point27', 'point4', 'point25', 'point26', 'point13', 'point6', 'point3', 'point27', 'point5', 'point8', 'point9', 'point24', 'point18', 'point30', 'point12', 'point19', 'point2', 'point29', 'point1', 'point8', 'point24', 'point16', 'point8', 'point20', 'point9', 'point6', 'point31', 'point1', 'point28']
-Node: Node: 35
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 35 is at location point14 and has 40 neighbours at locations 
- ['point19', 'point25', 'point20', 'point27', 'point13', 'point1', 'point12', 'point15', 'point28', 'point5', 'point6', 'point24', 'point16', 'point29', 'point6', 'point4', 'point30', 'point8', 'point1', 'point24', 'point2', 'point8', 'point20', 'point4', 'point23', 'point25', 'point21', 'point30', 'point6', 'point26', 'point18', 'point8', 'point13', 'point28', 'point9', 'point3', 'point31', 'point9', 'point31', 'point15']
-Node: Node: 36
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 36 is at location point9 and has 40 neighbours at locations 
- ['point9', 'point15', 'point25', 'point14', 'point4', 'point13', 'point27', 'point24', 'point15', 'point17', 'point30', 'point29', 'point21', 'point27', 'point28', 'point30', 'point24', 'point19', 'point21', 'point2', 'point20', 'point4', 'point3', 'point31', 'point6', 'point24', 'point6', 'point13', 'point25', 'point26', 'point31', 'point23', 'point6', 'point8', 'point28', 'point12', 'point8', 'point20', 'point25', 'point1']
-Node: Node: 37
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 37 is at location point6 and has 40 neighbours at locations 
- ['point30', 'point9', 'point5', 'point27', 'point8', 'point24', 'point26', 'point4', 'point21', 'point26', 'point28', 'point15', 'point12', 'point16', 'point20', 'point25', 'point18', 'point25', 'point31', 'point4', 'point6', 'point8', 'point20', 'point24', 'point27', 'point13', 'point1', 'point2', 'point14', 'point12', 'point13', 'point9', 'point8', 'point24', 'point20', 'point30', 'point19', 'point29', 'point7', 'point1']
-Node: Node: 38
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 38 is at location point30 and has 40 neighbours at locations 
- ['point25', 'point20', 'point7', 'point18', 'point24', 'point6', 'point29', 'point6', 'point8', 'point23', 'point26', 'point8', 'point16', 'point26', 'point27', 'point14', 'point24', 'point1', 'point28', 'point13', 'point21', 'point1', 'point8', 'point20', 'point4', 'point25', 'point12', 'point2', 'point24', 'point5', 'point6', 'point15', 'point20', 'point25', 'point12', 'point31', 'point17', 'point9', 'point9', 'point31']
-Node: Node: 39
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 39 is at location point28 and has 40 neighbours at locations 
- ['point27', 'point19', 'point20', 'point7', 'point25', 'point30', 'point4', 'point9', 'point3', 'point16', 'point4', 'point15', 'point24', 'point6', 'point1', 'point20', 'point29', 'point8', 'point14', 'point17', 'point9', 'point27', 'point5', 'point25', 'point25', 'point15', 'point20', 'point13', 'point21', 'point31', 'point6', 'point31', 'point26', 'point12', 'point13', 'point6', 'point30', 'point8', 'point12', 'point24']
-Node: Node: 40
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 40 is at location point25 and has 40 neighbours at locations 
- ['point14', 'point21', 'point31', 'point21', 'point27', 'point18', 'point26', 'point3', 'point24', 'point24', 'point20', 'point12', 'point8', 'point12', 'point26', 'point15', 'point19', 'point13', 'point8', 'point23', 'point7', 'point30', 'point20', 'point6', 'point1', 'point13', 'point9', 'point24', 'point6', 'point8', 'point6', 'point20', 'point4', 'point5', 'point9', 'point29', 'point1', 'point25', 'point30', 'point16']
-Node: Node: 41
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 41 is at location point13 and has 40 neighbours at locations 
- ['point14', 'point23', 'point30', 'point2', 'point25', 'point6', 'point8', 'point27', 'point13', 'point31', 'point24', 'point26', 'point12', 'point6', 'point25', 'point9', 'point28', 'point1', 'point12', 'point24', 'point15', 'point21', 'point20', 'point30', 'point5', 'point8', 'point27', 'point16', 'point21', 'point28', 'point18', 'point25', 'point15', 'point1', 'point4', 'point4', 'point8', 'point26', 'point6', 'point17']
-Node: Node: 42
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 42 is at location point6 and has 40 neighbours at locations 
- ['point9', 'point7', 'point13', 'point8', 'point1', 'point1', 'point15', 'point18', 'point5', 'point26', 'point6', 'point30', 'point30', 'point25', 'point20', 'point20', 'point2', 'point9', 'point14', 'point12', 'point8', 'point25', 'point4', 'point28', 'point12', 'point21', 'point31', 'point17', 'point26', 'point25', 'point13', 'point3', 'point24', 'point24', 'point6', 'point21', 'point27', 'point28', 'point24', 'point23']
-Node: Node: 43
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 43 is at location point25 and has 40 neighbours at locations 
- ['point5', 'point4', 'point6', 'point13', 'point30', 'point26', 'point7', 'point27', 'point18', 'point1', 'point4', 'point8', 'point20', 'point26', 'point21', 'point8', 'point14', 'point6', 'point24', 'point12', 'point23', 'point31', 'point13', 'point15', 'point19', 'point28', 'point2', 'point29', 'point25', 'point20', 'point24', 'point9', 'point30', 'point6', 'point25', 'point16', 'point17', 'point9', 'point24', 'point21']
-Node: Node: 44
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 44 is at location point26 and has 40 neighbours at locations 
- ['point21', 'point7', 'point31', 'point3', 'point4', 'point20', 'point12', 'point28', 'point9', 'point6', 'point1', 'point12', 'point16', 'point24', 'point25', 'point2', 'point30', 'point20', 'point1', 'point19', 'point6', 'point8', 'point15', 'point25', 'point28', 'point8', 'point24', 'point27', 'point13', 'point25', 'point27', 'point30', 'point13', 'point24', 'point23', 'point8', 'point20', 'point6', 'point9', 'point21']
-Node: Node: 45
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 45 is at location point3 and has 40 neighbours at locations 
- ['point2', 'point18', 'point23', 'point9', 'point17', 'point6', 'point31', 'point20', 'point5', 'point24', 'point6', 'point13', 'point20', 'point7', 'point8', 'point1', 'point12', 'point28', 'point27', 'point4', 'point30', 'point1', 'point16', 'point4', 'point21', 'point9', 'point31', 'point24', 'point15', 'point14', 'point21', 'point12', 'point25', 'point13', 'point30', 'point8', 'point26', 'point15', 'point28', 'point29']
-Node: Node: 46
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 46 is at location point5 and has 40 neighbours at locations 
- ['point7', 'point13', 'point24', 'point17', 'point24', 'point13', 'point3', 'point30', 'point25', 'point2', 'point8', 'point4', 'point12', 'point8', 'point14', 'point25', 'point28', 'point9', 'point28', 'point20', 'point23', 'point15', 'point1', 'point27', 'point30', 'point20', 'point6', 'point9', 'point4', 'point27', 'point26', 'point8', 'point6', 'point25', 'point26', 'point21', 'point24', 'point15', 'point18', 'point20']
-Node: Node: 47
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 47 is at location point20 and has 40 neighbours at locations 
- ['point2', 'point14', 'point13', 'point6', 'point31', 'point12', 'point7', 'point20', 'point4', 'point21', 'point6', 'point23', 'point27', 'point21', 'point6', 'point25', 'point19', 'point28', 'point26', 'point24', 'point1', 'point25', 'point1', 'point17', 'point9', 'point31', 'point8', 'point20', 'point13', 'point12', 'point3', 'point5', 'point29', 'point30', 'point18', 'point30', 'point8', 'point27', 'point16', 'point8']
-Node: Node: 48
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 48 is at location point20 and has 40 neighbours at locations 
- ['point25', 'point24', 'point2', 'point12', 'point6', 'point1', 'point19', 'point3', 'point15', 'point4', 'point30', 'point25', 'point28', 'point8', 'point7', 'point26', 'point13', 'point21', 'point17', 'point18', 'point1', 'point8', 'point6', 'point20', 'point24', 'point31', 'point27', 'point21', 'point29', 'point5', 'point27', 'point25', 'point14', 'point9', 'point24', 'point8', 'point6', 'point9', 'point26', 'point20']
-Node: Node: 49
-Total Blocks: 0
-PBFT Blocks: 0
-BigFoot Blocks: 0
-Node Node: 49 is at location point15 and has 40 neighbours at locations 
- ['point25', 'point3', 'point5', 'point12', 'point26', 'point6', 'point20', 'point15', 'point31', 'point7', 'point19', 'point30', 'point24', 'point1', 'point9', 'point30', 'point12', 'point4', 'point31', 'point27', 'point4', 'point24', 'point23', 'point28', 'point18', 'point25', 'point25', 'point6', 'point17', 'point16', 'point28', 'point13', 'point27', 'point13', 'point26', 'point6', 'point1', 'point8', 'point21', 'point29']
+Node Node: 9 is at location point21 and has 9 neighbours at locations 
+ ['point20', 'point9', 'point24', 'point12', 'point26', 'point23', 'point31', 'point27', 'point24']
+
+Metrics:
+------------------------------ METRICS ------------------------------
+Node: 0 -> {'Latency': '15.596', 'Throughput': '17.830', 'Blocktime': '5.137', 'Decentralisation': '0.043062'}
+Node: 1 -> {'Latency': '15.596', 'Throughput': '17.830', 'Blocktime': '5.137', 'Decentralisation': '0.043062'}
+Node: 2 -> {'Latency': '15.596', 'Throughput': '17.830', 'Blocktime': '5.137', 'Decentralisation': '0.043062'}
+Node: 3 -> {'Latency': '17.337', 'Throughput': '17.830', 'Blocktime': '5.178', 'Decentralisation': '0.043062'}
+Node: 4 -> {'Latency': '15.596', 'Throughput': '17.830', 'Blocktime': '5.137', 'Decentralisation': '0.043062'}
+Node: 5 -> {'Latency': '15.596', 'Throughput': '17.830', 'Blocktime': '5.137', 'Decentralisation': '0.043062'}
+Node: 6 -> {'Latency': '15.596', 'Throughput': '17.830', 'Blocktime': '5.137', 'Decentralisation': '0.043062'}
+Node: 7 -> {'Latency': '15.596', 'Throughput': '17.830', 'Blocktime': '5.137', 'Decentralisation': '0.043062'}
+Node: 8 -> {'Latency': '15.596', 'Throughput': '17.830', 'Blocktime': '5.137', 'Decentralisation': '0.043062'}
+Node: 9 -> {'Latency': '15.596', 'Throughput': '17.830', 'Blocktime': '5.137', 'Decentralisation': '0.043062'}

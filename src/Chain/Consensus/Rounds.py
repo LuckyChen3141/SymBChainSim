@@ -63,7 +63,6 @@ def handle_round_change_msg(event):
     state = node.state.cp_state
 
     msgs = state.round.votes
-
     if state.round.round >= new_round:
         return 'invalid'
 

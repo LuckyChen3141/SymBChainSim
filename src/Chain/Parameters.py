@@ -24,13 +24,13 @@ class Parameters:
         return {
             "simulation": Parameters.simulation,
             "application": Parameters.application,
-            # "execution": Parameters.execution,
-            # "data": Parameters.data,
-            # "consensus": Parameters.consensus,
-            # "network": Parameters.network,
+            "execution": Parameters.execution,
+            "data": Parameters.data,
+            "consensus": Parameters.consensus,
+            "network": Parameters.network,
 
-            # "BigFoot": Parameters.BigFoot,
-            # "PBFT": Parameters.PBFT
+            "BigFoot": Parameters.BigFoot,
+            "PBFT": Parameters.PBFT
         }
     
     @staticmethod
@@ -70,6 +70,13 @@ class Parameters:
 
     @staticmethod
     def calculate_fault_tolerance():
-        Parameters.application["f"] = int((Parameters.application["Nn"] - 1) / 3)
-        Parameters.application["required_messages"] = (2 * Parameters.application["f"]) + 1
+        params = read_yaml(f"Configs/{os.environ['config']}.yaml")
+
+        alpha=params["execution"]["alpha"]
+        if alpha==1:
+            Parameters.application["f"] = int((Parameters.application["Nn"] - 1) / 3)
+            Parameters.application["required_messages"] = (2 * Parameters.application["f"]) + 1
+        else:
+            Parameters.application["f"] = int((Parameters.application["Nn"]*alpha - 1) / 3)
+            Parameters.application["required_messages"] =(2 * Parameters.application["f"]) + 1
     # this is the number of messages required to reach consensus
