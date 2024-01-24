@@ -1,40 +1,40 @@
 simulation:
-  init_CP: "PBFT"
-  simTime: 100
-  interval_switch: False
-  interval_mean: 30
+  init_CP: "BigFoot" # BigFoot or PBFT
+  simTime: 1000 # simulation time
+  interval_switch: False # if True, the CP switches at a random time
+  interval_mean: 30 # mean interval between switching CPs
 
 application:
-  Nn: 10
-  TI_dur: 25
-  Tn: 25
-  Tsize: 0.01
+  Nn: 10 # number of nodes
+  TI_dur: 25 # duration of the transaction interval
+  Tn: 25 # number of transactions per interval
+  Tsize: 0.01 # size of a transaction
 
 execution:
-  creation_time: 0.1
-  block_val_delay: 0.5
-  msg_val_delay: 0.1
-  sync_message_request_delay: 1
-  alpha: 0.8 # probability of a node to be a 
+  creation_time: 0.1 # time to create a block
+  block_val_delay: 0.5 # time to validate a block
+  msg_val_delay: 0.1 # time to validate a message
+  sync_message_request_delay: 1 # time to request a sync message
+  alpha: 0.1 # probability of a node to be a validator
 
 data:
-  Bsize: 1
-  block_interval: 0.5
+  Bsize: 1 # size of a block
+  block_interval: 0.5 # part of block creation delay
 
 network:
-  base_msg_size: 0.2
-  type: "broadcast"
-  num_neighbours: 7
-  use_latency: distance 
-  same_city_latency_ms: 10
-  same_city_dev_ms: 5
-  queueing_delay: 0
-  processing_delay: 0
+  base_msg_size: 0.2 # size of a message
+  type: "broadcast" # broadcast, gossip, small_world
+  num_neighbours: 5 # number of neighbours for each node
+  use_latency: distance # distance or latency
+  same_city_latency_ms: 10 # latency between nodes in the same city
+  same_city_dev_ms: 2 # latency deviation between nodes in the same city
+  queueing_delay: 0.5 # delay in the queue
+  processing_delay: 0.5 # delay in processing
   beta: 0.4 # small world rewiring probability
 
   bandwidth:
-    mean: 2
-    dev: .5
+    mean: 2 # mean bandwidth
+    dev: .5 # bandwidth deviation
     debug: True
 
 consensus:
@@ -42,12 +42,13 @@ consensus:
   PBFT: Chain/Consensus/PBFT/PBFT_config.yaml
 
 behaviour:
-  behaviour_interval: 10
+  behaviour_interval: 10 # interval between behaviours
 
   byzantine_nodes:
     # percent of nodes that will be byzantine
     # (percentange based on how many faulty nodes the network can tolerate)
-    num_byzantine: 0
+    num_byzantine: 1
+    # define the chance a byzantine node will send bad data
   sync:
     # define the chance a byzantine node will send bad sync data 
     # (and the delay that will cause)
@@ -56,15 +57,15 @@ behaviour:
     # define the chance a byzantine node will not responde to a sync message
     # (and the delay that will cause) 
     no_response: 
-      delay: 5
+      delay: 5 
     probs:
-      low: 5
-      high: 20
+      low: 30
+      high: 60
 
   crash_probs:
     # percent of nodes that can crash (go offiline)
     # (based on the number of faulty nodes that the CP can tolerate) 
-    faulty_nodes: 0
+    faulty_nodes: 3
     # probabilities for crash
     mean_fault_time: 
       low: 30

@@ -6,7 +6,8 @@ import random, numpy
 import Chain.Consensus.BigFoot.BigFoot as BigFoot
 import Chain.Consensus.PBFT.PBFT as PBFT
 from Chain.Metrics import SimulationState, Metrics
-
+from Chain.Parameters import Parameters
+import Chain.tools as tools
 # Set the seed for random number generation
 seed = 5
 random.seed(seed)
@@ -15,6 +16,9 @@ numpy.random.seed(seed)
 def run():
     # Create a Manager object and set up the simulation
     manager = Manager()
+        # load params (cmd and env)
+    tools.set_env_vars_from_config()
+    Parameters.load_params_from_config()
     manager.set_up()
 
     # Start the simulation and measure the runtime

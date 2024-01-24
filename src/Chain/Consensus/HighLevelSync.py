@@ -29,11 +29,11 @@ def create_local_sync_event(desynced_node, request_node, time):
     missing_blocks = [b.copy() for b in request_node.blockchain if b.depth > latest_block.depth]    
 
     total_delay = 0    
-    
+    delay=0
     for i, b in enumerate(missing_blocks):
         delay_network = Network.calculate_message_propagation_delay(
             request_node, desynced_node, b.size)
-        
+
         delay = delay_network + Parameters.execution["block_val_delay"] + Parameters.execution["sync_message_request_delay"]
 
         total_delay += delay    
@@ -106,7 +106,7 @@ def apply_sync_missbehaiviour(sender):
     '''
     if not sender.state.alive:
         return Parameters.behaiviour["sync"]["no_response"]["delay"], True
-
+    delay = 0
     if sender.behaviour.byzantine:
         roll_missbehave = randint(0, 100)
         if roll_missbehave < sender.behaviour.sync_fault_chance:

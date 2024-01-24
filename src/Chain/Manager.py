@@ -33,13 +33,12 @@ class Manager:
         self.sim = None
         self.behaviour = None
 
+
     def set_up(self):
         '''
             Initial tasks required for the simulation to start
         '''
-        # load params (cmd and env)
-        tools.set_env_vars_from_config()
-        Parameters.load_params_from_config()
+
         Parameters.application["CP"] = CPs[Parameters.simulation["init_CP"]]
 
         # create simulator
@@ -57,7 +56,33 @@ class Manager:
 
         # schedule the first system events
         self.init_system_events()
-
+        
+    def modify(self, param, value):
+        '''
+        Modifies a parameter during runtime
+        '''
+        if param in Parameters.simulation:
+            Parameters.simulation[param] = value
+        elif param in Parameters.application:
+            Parameters.application[param] = value
+        elif param in Parameters.execution:
+            Parameters.execution[param] = value
+        elif param in Parameters.behaiviour:  # Corrected spelling
+            if param=="byzantine_nodes":
+                Parameters.behaiviour["byzantine_nodes"]["num_byzantine"] = value
+            elif param=="crash_probs":
+                Parameters.behaiviour["crash_probs"]["faulty_nodes"] = value
+            else:raise Exception(f"Parameter {param} not found in Behaviour")
+        elif param in Parameters.network:
+            Parameters.network[param] = value
+        elif param in Parameters.BigFoot:
+            Parameters.BigFoot[param] = value
+        elif param in Parameters.PBFT:
+            Parameters.PBFT[param] = value
+        else:
+            raise Exception(f"Parameter {param} not found")
+        Parameters.calculate_fault_tolerance()
+        
     def init_system_events(self):
         '''
             Sets up initial events 
@@ -270,7 +295,7 @@ class Behaiviour:
 
         for node in self.faulty:
             node.behaviour.faulty = True
-
+            
             node.behaviour.mean_fault_time = randint(
                 fault_params["mean_fault_time"]['low'],
                 fault_params["mean_fault_time"]["high"]

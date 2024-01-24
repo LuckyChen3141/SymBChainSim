@@ -51,8 +51,9 @@ class Metrics:
     def measure_all(state):
         Metrics.measure_latency(state)
         Metrics.measure_throughput(state)
-        Metrics.measure_interblock_time(state)
-        Metrics.measure_decentralisation_nodes(state)
+        # Metrics.measure_interblock_time(state)
+        # Metrics.measure_decentralisation_nodes(state)
+        # return Metrics.latency, Metrics.throughput, Metrics.blocktime
 
     @staticmethod
     def print_metrics():
@@ -113,7 +114,107 @@ class Metrics:
                      for curr, next in zip(node_state["blockchain"][:-1], node_state["blockchain"][1:]) }
             
             Metrics.blocktime[node_id] = {"values": diffs, "AVG": st.mean(diffs.values())}
-    
+    @staticmethod
+    def plot_metrics(bc_state):
+        """
+        Plots the average latency and throughput for each node in the blockchain simulation, with error bars representing the variance.
+
+        Latency and throughput are plotted in separate subplots.
+
+        Parameters:
+            bc_state: The blockchain state data used for calculating variances.
+        """
+        # Create a new figure with two subplots
+        fig, axs = plt.subplots(1, 2, figsize=(15, 5))
+
+        # Plot latency with variance
+        latency_values = [v["AVG"] for v in Metrics.latency.values()]
+        latency_variances = [st.variance(v["values"].values()) if len(v["values"].values()) > 1 else 0 for v in Metrics.latency.values()]
+        axs[0].bar(Metrics.latency.keys(), latency_values, yerr=latency_variances, capsize=5)
+        axs[0].set_title('Average Latency per Node')
+        axs[0].set_xlabel('Node ID')
+        axs[0].set_ylabel('Latency (s)')
+
+        # Plot throughput with variance
+        throughput_values = list(Metrics.throughput.values())
+        throughput_variances = [st.variance([len(x["transactions"]) for x in node["blockchain"]]) if len(node["blockchain"]) > 1 else 0 for node in bc_state.values()]
+        axs[1].bar(Metrics.throughput.keys(), throughput_values, yerr=throughput_variances, capsize=5)
+        axs[1].set_title('Average Throughput per Node')
+        axs[1].set_xlabel('Node ID')
+        axs[1].set_ylabel('Throughput (transactions/s)')
+
+        # Adjust layout and show the plot
+        plt.tight_layout()
+        plt.show()
+#     @staticmethod
+#     def plot_metrics():
+#         """
+#         Plots the average latency and throughput for each node in the blockchain simulation, with error bars representing the variance.
+
+#         Latency and throughput are plotted in separate subplots.
+#         """
+#         # Create a new figure with two subplots
+#         fig, axs = plt.subplots(1, 2, figsize=(15, 5))
+
+#         # Plot latency with variance
+#         latency_values = [v["AVG"] for v in Metrics.latency.values()]
+#         latency_variances = [st.variance(v["values"].values()) if len(v["values"].values()) > 1 else 0 for v in Metrics.latency.values()]
+#         axs[0].bar(Metrics.latency.keys(), latency_values, yerr=latency_variances, capsize=5)
+#         axs[0].set_title('Average Latency per Node')
+#         axs[0].set_xlabel('Node ID')
+#         axs[0].set_ylabel('Latency (s)')
+
+#         # Plot throughput with variance
+#         throughput_values = list(Metrics.throughput.values())
+#         throughput_variances = [st.variance([len(x["transactions"]) for x in node["blockchain"]]) if len(node["blockchain"]) > 1 else 0 for node in bc_state.values()]
+#         axs[1].bar(Metrics.throughput.keys(), throughput_values, yerr=throughput_variances, capsize=5)
+#         axs[1].set_title('Average Throughput per Node')
+#         axs[1].set_xlabel('Node ID')
+#         axs[1].set_ylabel('Throughput (transactions/s)')
+
+#         # Adjust layout and show the plot
+#         plt.tight_layout()
+#         plt.show()
+
+# # Example usage:
+#         # Create a new figure
+#         fig, axs = plt.subplots(1, 2, figsize=(15, 10))
+
+#         # Plot latency
+#         axs[0, 0].bar(Metrics.latency.keys(), [v["AVG"] for v in Metrics.latency.values()])
+#         axs[0, 0].set_title('Latency')
+#         axs[0, 0].set_xlabel('Node')
+#         axs[0, 0].set_ylabel('Latency')
+
+#         # Plot throughput
+#         axs[0, 1].bar(Metrics.throughput.keys(), Metrics.throughput.values())
+#         axs[0, 1].set_title('Throughput')
+#         axs[0, 1].set_xlabel('Node')
+#         axs[0, 1].set_ylabel('Throughput')
+
+#         # Show the figure
+#         plt.tight_layout()
+#         plt.show()
+        
+    @staticmethod
+    def metrics_result():
+        """
+        Calculates and returns the average metrics and their variances over all nodes in the blockchain simulation.
+
+        Returns:
+            A dictionary containing the average and variance of latency, throughput, blocktime, and decentralisation.
+        """
+        latency_averages = [v["AVG"] for v in Metrics.latency.values()]
+        throughput_averages = list(Metrics.throughput.values())
+        average_metrics = {
+            "Average Latency": st.mean(latency_averages),
+            "Latency Variance": st.variance(latency_averages) if len(latency_averages) > 1 else 0,
+            "Average Throughput": st.mean(throughput_averages),
+            "Throughput Variance": st.variance(throughput_averages) if len(throughput_averages) > 1 else 0,
+        }
+
+        return average_metrics
+
     @staticmethod
     def gini_coeficient(cumulative_dist):
         lorenz_curve = [(x+1)/len(cumulative_dist) for x in range(len(cumulative_dist))]
