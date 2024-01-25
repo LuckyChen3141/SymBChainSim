@@ -81,6 +81,7 @@ class Manager:
             Parameters.PBFT[param] = value
         else:
             raise Exception(f"Parameter {param} not found")
+        
         Parameters.calculate_fault_tolerance()
         
     def init_system_events(self):
@@ -211,7 +212,7 @@ class Manager:
     def schedule_change_cp_event(self):
         if Parameters.simulation["interval_switch"]:
             time = self.sim.clock + expovariate(1/Parameters.simulation["interval_mean"])
-            cp = PBFT if Parameters.application["CP"] == BigFoot else BigFoot
+            cp = PBFT if Parameters.application["CP"] == PBFT else BigFoot
 
         event = SystemEvent(
             time = time,

@@ -58,9 +58,8 @@ class Parameters:
 
         Parameters.application = params["application"]
         Parameters.application["txIDS"] = 0 # incremental txion ids starting on...
-        Parameters.calculate_fault_tolerance()
-
         Parameters.execution = params["execution"]
+        Parameters.calculate_fault_tolerance()
 
         Parameters.data = params["data"]
 
@@ -70,9 +69,8 @@ class Parameters:
 
     @staticmethod
     def calculate_fault_tolerance():
-        params = read_yaml(f"Configs/{os.environ['config']}.yaml")
-
-        alpha=params["execution"]["alpha"]
+        #print("test",Parameters.execution)
+        alpha=Parameters.execution["alpha"]
         if alpha==1:
             Parameters.application["f"] = int((Parameters.application["Nn"] - 1) / 3)
             Parameters.application["required_messages"] = (2 * Parameters.application["f"]) + 1

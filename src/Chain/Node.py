@@ -78,6 +78,7 @@ class Node():
         self.sync_queue = Queue()
 
         self.backlog = []
+        self.validator=False
     
     def __repr__(self):
         if self.state.alive:

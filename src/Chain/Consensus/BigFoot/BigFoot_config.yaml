@@ -1,5 +1,5 @@
-fast_path_timeout: 10
-timeout: 20
+fast_path_timeout: 5
+timeout: 10
 
 missbehaviours:
   - drop_message

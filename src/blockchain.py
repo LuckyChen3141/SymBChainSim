@@ -16,10 +16,23 @@ numpy.random.seed(seed)
 def run():
     # Create a Manager object and set up the simulation
     manager = Manager()
-        # load params (cmd and env)
+    #     # load params (cmd and env)
+    # tools.set_env_vars_from_config()
+    # Parameters.load_params_from_config()
+    # manager.set_up()
     tools.set_env_vars_from_config()
     Parameters.load_params_from_config()
+    # Use the modify method to set the parameters
+    manager.modify('Nn', 10)
+    manager.modify('alpha', 1)
+    manager.modify('init_CP', "PBFT")
+    manager.modify('beta', 0.1)
+    manager.modify('type', "gossip")
+    manager.modify('simTime', 1000)
+    manager.modify('crash_probs', 1)
+    manager.modify('byzantine_nodes', 1)
     manager.set_up()
+    print("Simulation parameters:", Parameters.export_state())
 
     # Start the simulation and measure the runtime
     t = datetime.now()
@@ -47,7 +60,7 @@ def run():
         # Store the simulation state and measure the metrics
         SimulationState.store_state(manager.sim)
         Metrics.measure_all(SimulationState.blockchain_state)
-
+    
         # Redirect stdout to a string buffer, print the metrics, and then reset stdout
         old_stdout = sys.stdout
         sys.stdout = buffer = io.StringIO()

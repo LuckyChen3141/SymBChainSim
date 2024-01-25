@@ -1,6 +1,6 @@
 simulation:
-  init_CP: "BigFoot" # BigFoot or PBFT
-  simTime: 1000 # simulation time
+  init_CP: "PBFT" # BigFoot or PBFT
+  simTime: 2000 # simulation time
   interval_switch: False # if True, the CP switches at a random time
   interval_mean: 30 # mean interval between switching CPs
 
@@ -15,7 +15,7 @@ execution:
   block_val_delay: 0.5 # time to validate a block
   msg_val_delay: 0.1 # time to validate a message
   sync_message_request_delay: 1 # time to request a sync message
-  alpha: 0.1 # probability of a node to be a validator
+  alpha: 1 # probability of a node to be a validator, and never let alpha be too small
 
 data:
   Bsize: 1 # size of a block
@@ -23,8 +23,8 @@ data:
 
 network:
   base_msg_size: 0.2 # size of a message
-  type: "broadcast" # broadcast, gossip, small_world
-  num_neighbours: 5 # number of neighbours for each node
+  type: "broadcast" # broadcast, gossip, smallworld
+  num_neighbours: 4 # number of neighbours for each node
   use_latency: distance # distance or latency
   same_city_latency_ms: 10 # latency between nodes in the same city
   same_city_dev_ms: 2 # latency deviation between nodes in the same city
@@ -47,7 +47,7 @@ behaviour:
   byzantine_nodes:
     # percent of nodes that will be byzantine
     # (percentange based on how many faulty nodes the network can tolerate)
-    num_byzantine: 1
+    num_byzantine: 0
     # define the chance a byzantine node will send bad data
   sync:
     # define the chance a byzantine node will send bad sync data 
@@ -65,7 +65,7 @@ behaviour:
   crash_probs:
     # percent of nodes that can crash (go offiline)
     # (based on the number of faulty nodes that the CP can tolerate) 
-    faulty_nodes: 3
+    faulty_nodes: 0
     # probabilities for crash
     mean_fault_time: 
       low: 30
