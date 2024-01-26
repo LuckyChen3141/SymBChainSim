@@ -200,11 +200,14 @@ class Network:
             for _ in range(int(beta1 * len(Network.nodes))):
                 # Check if there are nodes to choose from
                 if Network.nodes:
-                    while True:
-                        potential_neighbour = random.choice(Network.nodes)
+                    potential_neighbours = [n for n in Network.nodes if n != node and n not in node.neighbours]
+                    random.shuffle(potential_neighbours)
+                    for potential_neighbour in potential_neighbours:
                         if potential_neighbour != node and potential_neighbour not in node.neighbours:
                             node.neighbours.append(potential_neighbour)
                             break
+                    else:
+                        raise ValueError("No suitable nodes to choose from")
                 else:
                     raise IndexError("No nodes to choose from")
             if len(node.neighbours) < num_neighbours:

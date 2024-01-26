@@ -1,0 +1,22 @@
+--------------------time=1
+Running simulation with Node=9, Validator=1, Protocol=PBFT, Runtime=100, type=smallworld, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=2
+Running simulation with Node=9, Validator=1, Protocol=BigFoot, Runtime=100, type=smallworld, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=3
+Running simulation with Node=12, Validator=1, Protocol=PBFT, Runtime=100, type=smallworld, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=4
+Running simulation with Node=12, Validator=1, Protocol=BigFoot, Runtime=100, type=smallworld, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=5
+Running simulation with Node=15, Validator=1, Protocol=PBFT, Runtime=100, type=smallworld, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=6
+Running simulation with Node=15, Validator=1, Protocol=BigFoot, Runtime=100, type=smallworld, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=7
+Running simulation with Node=9, Validator=1, Protocol=PBFT, Runtime=100, type=broadcast, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=8
+Running simulation with Node=9, Validator=1, Protocol=BigFoot, Runtime=100, type=broadcast, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=9
+Running simulation with Node=12, Validator=1, Protocol=PBFT, Runtime=100, type=broadcast, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=10
+Running simulation with Node=12, Validator=1, Protocol=BigFoot, Runtime=100, type=broadcast, beta=0.5, faulty_nodes=0, num_byzantine=0
+time=11
+Running simulation with Node=15, Validator=1, Protocol=PBFT, Runtime=100, type=broadcast, beta=0.5, faulty_nodes=0, num_byzantine=0

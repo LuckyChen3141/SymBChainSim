@@ -23,14 +23,14 @@ data:
 
 network:
   base_msg_size: 0.2 # size of a message
-  type: "broadcast" # broadcast, gossip, smallworld
+  type: "smallworld" # broadcast, gossip, smallworld
   num_neighbours: 4 # number of neighbours for each node
   use_latency: distance # distance or latency
   same_city_latency_ms: 10 # latency between nodes in the same city
   same_city_dev_ms: 2 # latency deviation between nodes in the same city
   queueing_delay: 0.5 # delay in the queue
   processing_delay: 0.5 # delay in processing
-  beta: 0.4 # small world rewiring probability
+  beta: 0.2 # small world rewiring probability
 
   bandwidth:
     mean: 2 # mean bandwidth
