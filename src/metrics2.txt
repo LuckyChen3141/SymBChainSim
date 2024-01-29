@@ -1,0 +1,273 @@
+time=1
+Running simulation with Node=12, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=2
+Running simulation with Node=12, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=3
+Running simulation with Node=14, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=4
+Running simulation with Node=14, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=5
+Running simulation with Node=16, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=6
+Running simulation with Node=16, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=7
+Running simulation with Node=18, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=8
+Running simulation with Node=18, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=9
+Running simulation with Node=20, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=10
+Running simulation with Node=20, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=11
+Running simulation with Node=22, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=12
+Running simulation with Node=22, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=13
+Running simulation with Node=24, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=14
+Running simulation with Node=24, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=15
+Running simulation with Node=26, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=16
+Running simulation with Node=26, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=17
+Running simulation with Node=28, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=18
+Running simulation with Node=28, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=19
+Running simulation with Node=30, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=20
+Running simulation with Node=30, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=21
+Running simulation with Node=32, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=22
+Running simulation with Node=32, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=23
+Running simulation with Node=34, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=24
+Running simulation with Node=34, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=25
+Running simulation with Node=36, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=26
+Running simulation with Node=36, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=27
+Running simulation with Node=38, Validator=1, Protocol=PBFT, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=28
+Running simulation with Node=38, Validator=1, Protocol=BigFoot, Runtime=600, type=broadcast, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=29
+Running simulation with Node=12, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=30
+Running simulation with Node=12, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=31
+Running simulation with Node=14, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=32
+Running simulation with Node=14, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=33
+Running simulation with Node=16, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=34
+Running simulation with Node=16, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=35
+Running simulation with Node=18, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=36
+Running simulation with Node=18, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=37
+Running simulation with Node=20, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=38
+Running simulation with Node=20, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=39
+Running simulation with Node=22, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=40
+Running simulation with Node=22, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=41
+Running simulation with Node=24, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=42
+Running simulation with Node=24, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=43
+Running simulation with Node=26, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=44
+Running simulation with Node=26, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=45
+Running simulation with Node=28, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=46
+Running simulation with Node=28, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=47
+Running simulation with Node=30, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=48
+Running simulation with Node=30, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=49
+Running simulation with Node=32, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=50
+Running simulation with Node=32, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=51
+Running simulation with Node=34, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=52
+Running simulation with Node=34, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=53
+Running simulation with Node=36, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=54
+Running simulation with Node=36, Validator=1, Protocol=BigFoot, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...
+Simulation finished.
+------------------------------ METRICS ------------------------------
+time=55
+Running simulation with Node=38, Validator=1, Protocol=PBFT, Runtime=600, type=gossip, beta=0.2, faulty_nodes=0, num_byzantine=0
+Simulation started...

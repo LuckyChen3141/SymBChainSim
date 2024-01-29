@@ -60,7 +60,7 @@ def run():
         # Store the simulation state and measure the metrics
         SimulationState.store_state(manager.sim)
         Metrics.measure_all(SimulationState.blockchain_state)
-    
+        Metrics.print_metrics(SimulationState.blockchain_state)
         # Redirect stdout to a string buffer, print the metrics, and then reset stdout
         old_stdout = sys.stdout
         sys.stdout = buffer = io.StringIO()

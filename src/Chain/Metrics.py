@@ -43,7 +43,7 @@ class Metrics:
     latency = {}
     throughput = {}
     blocktime = {}
-
+    CP={}
     decentralisation = {}
 
     
@@ -51,15 +51,15 @@ class Metrics:
     def measure_all(state):
         Metrics.measure_latency(state)
         Metrics.measure_throughput(state)
-        # Metrics.measure_interblock_time(state)
-        # Metrics.measure_decentralisation_nodes(state)
-        # return Metrics.latency, Metrics.throughput, Metrics.blocktime
+        Metrics.measure_interblock_time(state)
+        Metrics.measure_decentralisation_nodes(state)
+        Metrics.measure_cp_messages(state)
+        return Metrics.latency, Metrics.throughput, Metrics.blocktime
 
     @staticmethod
-    def print_metrics():
+    def print_metrics(bc_state):
         averages = {n:{} for n in Metrics.latency.keys()}
         val = "{v:.3f}"
-
         #latency
         for key, value in Metrics.latency.items():
             averages[key]["Latency"] = val.format(v=value["AVG"])
@@ -79,8 +79,14 @@ class Metrics:
 
         print("-"*30, "METRICS", "-"*30)
 
-        for key, value in averages.items():
-            print(f"Node: {key} -> {value}")
+        # for key, value in averages.items():
+        #     averages[key]["location"]  = bc_state[key]["location"]  # Assuming location data is stored with key "location"
+        #     #print(f"Node: {key} -> {value}, Location: {location}")
+            
+        # for key, value in averages.items():
+        #     averages[key]["message"] = bc_state[key]["CP_Messages"]  # Assuming location data is stored with key "location"
+        #     #print(f"Node: {key} -> {value}, Location: {message}")
+
 
     @staticmethod
     def measure_latency(bc_state):
@@ -105,6 +111,14 @@ class Metrics:
         for node_id, node_state in bc_state.items():
             sum_tx = sum([len(x["transactions"]) for x in node_state["blockchain"]])
             Metrics.throughput[node_id] = sum_tx/Parameters.simulation["simTime"]
+
+    @staticmethod
+    def measure_cp_messages(bc_state):
+        "measure the cp messages sent by each node"
+        sum_tx={}
+        for node_id, node_state in bc_state.items():
+            CP_Messages= node_state["CP_Messages"] 
+            Metrics.CP[node_id] = CP_Messages/Parameters.simulation["simTime"]
 
     @staticmethod
     def measure_interblock_time(bc_state):
@@ -211,6 +225,8 @@ class Metrics:
             "Latency Variance": st.variance(latency_averages) if len(latency_averages) > 1 else 0,
             "Average Throughput": st.mean(throughput_averages),
             "Throughput Variance": st.variance(throughput_averages) if len(throughput_averages) > 1 else 0,
+            "Average CP Messages": st.mean(Metrics.CP.values()),
+            "CP Messages Variance": st.variance(Metrics.CP.values()) if len(Metrics.CP.values()) > 1 else 0,
         }
 
         return average_metrics

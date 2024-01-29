@@ -12,10 +12,21 @@ import json
 
 class Network:
     '''
-        Models the blockchain p2p network
-            nodes: list of BP's
-            locations: list of various locations node can be in
-            latency_map: map of propgation latencies between locations
+    This class models the blockchain peer-to-peer network. It supports different types of network protocols:
+
+    1. Gossip: In this protocol, a node sends a message to a random subset of its neighbours. Those neighbours then forward the message to their neighbours, and so on. This process continues until all nodes have received the message.
+
+    2. Broadcast: In this protocol, a node sends a message to all other nodes in the network.
+
+    3. Smallworld: This protocol is a variant of the gossip protocol. In addition to sending messages to a random subset of its neighbours, a node also sends messages to a few randomly chosen distant nodes. This helps to speed up message propagation in the network.
+
+    4. Lattice: In this protocol, nodes are arranged in a grid-like structure (lattice). A node sends a message to its immediate neighbours in the lattice.
+
+    The class also provides methods for initializing the network, assigning locations and bandwidths to nodes, and calculating message propagation delay.
+     
+    nodes: list of BP's
+    locations: list of various locations node can be in
+    latency_map: map of propgation latencies between locations
     '''
     nodes = None
     locations = None
@@ -63,7 +74,7 @@ class Network:
             return 0
 
         Network.message(sender, receiver, msg)
-        
+     
     @staticmethod
     def broadcast(node, event):
         for n in Network.nodes:
@@ -79,6 +90,8 @@ class Network:
         msg.time += delay
         
         receiver.add_event(msg)
+        sender.total_messages += 1
+        receiver.total_messages += 1
     # @staticmethod
     # def smallworld_message(node, event):
     #     # Get the immediate neighbours

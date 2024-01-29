@@ -47,7 +47,7 @@ class Node():
         self.blockchain = []
         self.pool = []
         self.blocks = 0
-
+        self.total_messages=0
         self.neighbours = None
         self.location = None
         self.bandwidth = None
@@ -165,7 +165,9 @@ class Node():
                 "cp": self.state.cp.NAME
             },
 
-            "behaviour": self.behaviour
+            "behaviour": self.behaviour,
+            
+            "CP_Messages":self.total_messages
         }
 
     def update(self, time, round=-1):

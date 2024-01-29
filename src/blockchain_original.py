@@ -31,11 +31,11 @@ def run():
             '| pbft:',len([x for x in n.blockchain if x.consensus == PBFT]),
             '| bf:',len([x for x in n.blockchain if x.consensus == BigFoot]),
             )
-    
+
     SimulationState.store_state(manager.sim)
 
     Metrics.measure_all(SimulationState.blockchain_state)
-    Metrics.print_metrics()
+    Metrics.print_metrics(SimulationState.blockchain_state)
     print(Metrics.metrics_result())
 
     print(f"\nSIMULATION EXECUTION TIME: {runtime}")

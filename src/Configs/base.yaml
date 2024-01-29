@@ -1,11 +1,11 @@
 simulation:
-  init_CP: "PBFT" # BigFoot or PBFT
-  simTime: 2000 # simulation time
+  init_CP: "BigFoot" # BigFoot or PBFT
+  simTime: 200 # simulation time
   interval_switch: False # if True, the CP switches at a random time
   interval_mean: 30 # mean interval between switching CPs
 
 application:
-  Nn: 10 # number of nodes
+  Nn: 15 # number of nodes
   TI_dur: 25 # duration of the transaction interval
   Tn: 25 # number of transactions per interval
   Tsize: 0.01 # size of a transaction
@@ -14,8 +14,8 @@ execution:
   creation_time: 0.1 # time to create a block
   block_val_delay: 0.5 # time to validate a block
   msg_val_delay: 0.1 # time to validate a message
-  sync_message_request_delay: 1 # time to request a sync message
-  alpha: 1 # probability of a node to be a validator, and never let alpha be too small
+  sync_message_request_delay: 0.4 # time to request a sync message
+  alpha: 0.5 # probability of a node to be a validator, and never let alpha be too small
 
 data:
   Bsize: 1 # size of a block
@@ -23,17 +23,17 @@ data:
 
 network:
   base_msg_size: 0.2 # size of a message
-  type: "smallworld" # broadcast, gossip, smallworld
-  num_neighbours: 4 # number of neighbours for each node
+  type: "gossip" # broadcast, gossip, smallworld, lattice
+  num_neighbours: 14 # number of neighbours for each node
   use_latency: distance # distance or latency
-  same_city_latency_ms: 10 # latency between nodes in the same city
+  same_city_latency_ms: 5 # latency between nodes in the same city
   same_city_dev_ms: 2 # latency deviation between nodes in the same city
-  queueing_delay: 0.5 # delay in the queue
-  processing_delay: 0.5 # delay in processing
-  beta: 0.2 # small world rewiring probability
+  queueing_delay: 0.01 # delay in the queue
+  processing_delay: 0.01 # delay in processing
+  beta: 0.3 # small world rewiring probability
 
   bandwidth:
-    mean: 2 # mean bandwidth
+    mean: 5 # mean bandwidth
     dev: .5 # bandwidth deviation
     debug: True
 
@@ -43,7 +43,7 @@ consensus:
 
 behaviour:
   behaviour_interval: 10 # interval between behaviours
-
+  # shall firstly have faulty node, then have byzantine node, i.e. faulty_nodes > num_byzantine
   byzantine_nodes:
     # percent of nodes that will be byzantine
     # (percentange based on how many faulty nodes the network can tolerate)
@@ -59,8 +59,8 @@ behaviour:
     no_response: 
       delay: 5 
     probs:
-      low: 30
-      high: 60
+      low: 10
+      high: 30
 
   crash_probs:
     # percent of nodes that can crash (go offiline)
@@ -68,8 +68,8 @@ behaviour:
     faulty_nodes: 0
     # probabilities for crash
     mean_fault_time: 
-      low: 30
-      high: 60
+      low: 10
+      high: 30
     # how long for the node to recover
     mean_recovery_time: 
       low: 10
